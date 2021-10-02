@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { SigninComponent } from './components/signin/signin.component';
+import { RegisterComponent } from './components/register/register.component';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'signin' },
+  { path: 'signin', component: SigninComponent },
+  { path: 'register', component: RegisterComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppComponent {
-  title = 'angular-material-auth-ui';
-}
+
+export class AppRoutingModule { }
