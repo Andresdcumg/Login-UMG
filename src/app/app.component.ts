@@ -1,17 +1,10 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { SigninComponent } from './components/signin/signin.component';
-import { RegisterComponent } from './components/register/register.component';
+import { Component } from '@angular/core';
 
-const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'signin' },
-  { path: 'signin', component: SigninComponent },
-  { path: 'register', component: RegisterComponent }
-];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-
-export class AppRoutingModule { }
+export class AppComponent {
+  title = 'El increible login de Wilmer el Torres';
+}
