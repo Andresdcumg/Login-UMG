@@ -1,2 +1,2 @@
-# Login-UMG
+# LoginUMG
 Login UMG
